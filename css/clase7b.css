@@ -1,0 +1,141 @@
+/*reseteamos el margin y pading de todos los elementos*/
+*{
+margin: 0%;
+padding: 0%;
+}
+
+#grilla{
+display: grid;
+
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+ul{
+    display: flex;
+    list-style-type: none; /*para sacar las viñetas*/
+    background-color: black;
+}
+
+li{
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+footer p{
+    color: beige;
+    font-size: 20px;
+}
+
+
+
+
+/*DISPOSITIVOS CHICOS*/
+@media only screen and (max-width:600px){
+
+header{
+
+    height: 300px;
+}
+    #grilla{
+        height: 1600px;
+        grid-template-columns: 90%;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-areas:"foto1"
+                            "foto2"
+                            "foto3"
+                            "foto4"
+                            "foto5"
+                            "foto6";
+      align-content:space-around;
+      justify-content: center;
+    }
+    ul{
+        height: 300px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    footer{
+        height: 300px;
+        background-color: black;
+    }
+
+}
+
+/*DISPOSITIVOS MEDIOS, como por ej una TABLET*/
+
+@media only screen and (min-width:600px){
+
+    header{
+        height: 500px;
+    }
+
+#grilla{
+height: 1500px;
+grid-template-columns:40% 40%;
+grid-template-rows: 500px 500px 500px;
+grid-template-areas: "foto 1 foto2"
+                    "foto3 foto4"
+                      "foto5 foto6";
+justify-content: space-evenly;
+align-content: space-around;
+}
+
+nav{
+    height: 100px;
+    background-color: black;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+ul{
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+
+    height: 200px;
+    background-color: black;
+}
+}
+
+
+/*DISPOSITIVOS GRANDES*/
+
+@media only screen and (min-widht:992px){
+
+    #grilla{
+        height: 700px; /*si no lo ponemos lo hereda del otro*/
+grid-template-columns: 30% 30% 30%;
+grid-template-rows: 600px 600px;
+grid-template-areas: "foto1 foto2 foto3"
+                      "foto4 foto5 foto6";
+                      justify-content: space-evenly;
+                      align-items: center;
+    }
+
+footer{
+display: flex;
+    background-color: black;
+    height: 150px;
+}
+}
+
+
+
+
+
+
+
+
